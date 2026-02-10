@@ -1,7 +1,45 @@
-churn/
+# =========================
+# Python
+# =========================
 __pycache__/
-*.pyc
-.DS_Store
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+churn/
+venv/
+.venv/
+
+# Environment variables
+.env
+*.env
+
+# =========================
+# Data & Large Files
+# =========================
+data/raw/*
+data/processed/*
+data/external/*
+
+# =========================
+# ML / Experiment Tracking
+# =========================
 mlruns/
-data/raw/*.csv
+artifacts/
+models/*.pkl
+models/*.joblib
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# IDE / OS
+# =========================
+.vscode/
+.idea/
+.DS_Store
 
