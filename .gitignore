@@ -1,0 +1,7 @@
+churn/
+__pycache__/
+*.pyc
+.DS_Store
+mlruns/
+data/raw/*.csv
+
