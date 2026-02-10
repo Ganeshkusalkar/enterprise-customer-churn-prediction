@@ -1,45 +1,23 @@
-# =========================
 # Python
-# =========================
 __pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-.Python
-
-# Virtual environments
-churn/
-venv/
-.venv/
-
-# Environment variables
-.env
-*.env
-
-# =========================
-# Data & Large Files
-# =========================
-data/raw/*
-data/processed/*
-data/external/*
-
-# =========================
-# ML / Experiment Tracking
-# =========================
-mlruns/
-artifacts/
-models/*.pkl
-models/*.joblib
-
-# =========================
-# Jupyter
-# =========================
-.ipynb_checkpoints/
-
-# =========================
-# IDE / OS
-# =========================
-.vscode/
-.idea/
+*.pyc
 .DS_Store
 
+# Virtual env
+churn/
+
+# DVC
+.dvc/cache/
+
+# Data (ignore raw data but keep .dvc files)
+data/raw/*
+!data/raw/*.dvc
+
+# MLflow
+mlruns/
+
+
+data/raw/*.csv
+data/processed/*
+mlruns/
+*.dvc.cache
