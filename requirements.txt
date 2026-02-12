@@ -42,3 +42,7 @@ lightgbm
 joblib
 matplotlib
 seaborn
+
+lifelines
+dowhy
+graphviz  # for DoWhy causal graphs (may need to install graphviz system binary separately)
