@@ -29,3 +29,6 @@ jobs:
 
     - name: Build Docker image
       run: docker build -t telco-churn-api .
+    
+    - name: Run tests
+      run: pytest
