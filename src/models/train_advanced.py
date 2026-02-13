@@ -74,8 +74,9 @@ def train_xgboost_and_log():
         model_dir = Path("models")
         model_dir.mkdir(exist_ok=True)
         model_path = model_dir / "xgboost_churn_model.pkl"
-        joblib.dump(model, model_path)
-        print(f"XGBoost model saved locally: {model_path}")
+        # After model.fit(...)
+        joblib.dump(model, "models/xgboost_model.pkl")
+        print("XGBoost model saved to models/xgboost_model.pkl for FastAPI use")
 
         # Predictions
         y_pred = model.predict(Xt_test)
