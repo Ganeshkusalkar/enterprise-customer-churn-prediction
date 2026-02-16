@@ -5,7 +5,7 @@ import pandas as pd
 import json
 
 # Configuration - change this when deployed!
-API_URL = "http://127.0.0.1:8000/predict"   # ← Local backend
+API_URL = "https://your-telco-churn-api.onrender.com/predict"  # ← update this  # ← Local backend
 # API_URL = "https://your-render-app.onrender.com/predict"  # ← Use this when deployed
 
 st.set_page_config(
