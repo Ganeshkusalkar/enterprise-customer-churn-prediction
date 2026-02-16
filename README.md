@@ -1,89 +1,47 @@
-# Enterprise Telco Customer Churn Prediction Pipeline
+# Enterprise Customer Churn Prediction
 
-Production-grade end-to-end MLOps project for predicting customer churn in telecom using the IBM Telco dataset.
+## Overview
+This project aims to analyze and predict customer churn for a company, allowing stakeholders to take proactive measures to retain valuable customers. By applying various machine learning techniques, we aim to identify factors contributing to customer churn and predict when it may occur.
 
-[![CI](https://github.com/Ganeshkusalkar/enterprise-customer-churn-prediction/actions/workflows/ci.yml/badge.svg)](https://github.com/Ganeshkusalkar/enterprise-customer-churn-prediction/actions/workflows/ci.yml)
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![Docker](https://img.shields.io/badge/Docker-ready-blue)
-![MLflow](https://img.shields.io/badge/MLflow-tracked-green)
+## Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Data](#data)
+4. [Models Used](#models-used)
+5. [Results](#results)
+6. [License](#license)
 
-## Problem Statement
+## Installation
+To set up the project, you’ll need to clone the repository and install the required packages. You can do this by running the following commands:
 
-Customer churn costs telecom companies millions annually in lost revenue and acquisition costs.  
-This project builds a **reliable, production-ready system** to predict which customers are likely to churn — enabling targeted retention campaigns.
+```bash
+git clone https://github.com/Ganeshkusalkar/enterprise-customer-churn-prediction.git
+cd enterprise-customer-churn-prediction
+pip install -r requirements.txt
+```
 
-**Business Impact Goal**: Reduce churn rate by identifying at-risk customers early (simulated ~20–25% reduction potential).
+## Usage
+After the environment is set up, you can run the main program using:
 
-## Solution Overview
+```bash
+python main.py
+```
 
-End-to-end MLOps pipeline:
-- Data validation & versioning
-- Advanced feature engineering & preprocessing
-- Model training with explainability & tracking
-- Survival analysis + causal inference for deeper insights
-- Real-time inference API + interactive dashboard
-- Containerized & CI/CD automated
+## Data
+This project uses a dataset that includes customer demographics, account information, and service information. The dataset can be found in the `/data` directory.
 
-### Architecture Diagram
+## Models Used
+1. Logistic Regression
+2. Random Forest
+3. Gradient Boosting
 
-![MLOps Pipeline Architecture](docs/architecture-mlops.png)  
-*End-to-end MLOps architecture: Data → Preprocessing → Training → Deployment → Monitoring → Retrain loop*
+Each model is evaluated based on accuracy, precision, and recall metrics.
 
-![Churn Prediction Flow](docs/churn-flow-diagram.png)  
-*High-level churn prediction system flow (data ingestion to business action)*
+## Results
+The model performances are documented in the `/results` directory. Key findings indicate factors that significantly affect customer churn and the predictive capability of each model.
 
-![XGBoost Flowchart](docs/xgboost-flowchart.png)  
-*How XGBoost builds boosted trees for accurate predictions*
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Key Features & Results
-
-- **Data Versioning**: DVC for raw & processed data reproducibility
-- **Validation**: Great Expectations programmatic suite
-- **Preprocessing**: Modular scikit-learn ColumnTransformer (handles TotalCharges, categorical encoding, scaling)
-- **Models**:
-  - Baseline: Logistic Regression
-  - Advanced: XGBoost (best performer)
-  - Survival: Kaplan-Meier (Lifelines) for time-to-churn
-  - Causal: DoWhy for root-cause analysis (e.g., monthly contract impact)
-- **Tracking**: MLflow (experiments, metrics, artifacts)
-- **Serving**: FastAPI real-time API + Streamlit interactive dashboard
-- **Deployment**: Docker + GitHub Actions CI (lint & build)
-- **Results** (from XGBoost run):
-  - F1-Score: [Insert your value, e.g. 0.72]
-  - PR-AUC: [Insert your value, e.g. 0.68]
-  - Simulated retention value: ₹[Insert calculated value] Cr/year (assuming 20% intervention on predicted churners @ ₹12k/customer)
-
-**Confusion Matrix** (XGBoost predictions):  
-![Confusion Matrix](docs/confusion-matrix.png)
-
-**Survival Curve** (Time-to-Churn):  
-![Survival Curve](docs/survival-curve.png)
-
-**MLflow Dashboard** (Experiments & Metrics):  
-![MLflow Dashboard](docs/mlflow-dashboard.png)
-
-## Tech Stack
-
-- **Languages**: Python 3.10+
-- **Data/ML**: pandas, scikit-learn, XGBoost, LightGBM, Lifelines, DoWhy, MLflow
-- **Validation/Versioning**: Great Expectations, DVC
-- **API**: FastAPI + Uvicorn
-- **Dashboard**: Streamlit
-- **Container/CI**: Docker, GitHub Actions
-- **Other**: joblib, matplotlib, seaborn
-
-## Setup & Run Locally
-
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/Ganeshkusalkar/enterprise-customer-churn-prediction.git
-   cd enterprise-customer-churn-prediction
-
-
-## Live Demos
-
-- **API (FastAPI)**: https://your-telco-churn-api.onrender.com/docs  
-  (Try /predict endpoint interactively)
-
-- **Dashboard (Streamlit)**: https://your-dashboard.streamlit.app  
-  (Interactive form → real-time predictions from backend)
+---
+For any inquiries or feedback, please feel free to reach out to the project maintainer at ganesh.kusalkar@example.com.
