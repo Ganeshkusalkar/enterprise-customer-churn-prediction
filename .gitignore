@@ -1,4 +1,4 @@
-# Python / Bytecode
+# Python bytecode / compiled files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -10,67 +10,58 @@ __pycache__/
 venv/
 .env
 .venv/
-churn/                   # ← your custom venv name
+churn/                   # your custom venv folder
 
-# Jupyter / Notebooks
+# Jupyter / Notebooks temporary files
 .ipynb_checkpoints/
 *.ipynb_checkpoints/
 
-# Data – ignore large/raw files, but keep DVC tracking files
+# Data – ignore large/raw files, keep DVC tracking
 data/raw/*
-!data/raw/*.dvc          # keep .dvc pointer files
-data/processed/*
-!data/processed/*.dvc    # keep DVC tracking for processed if needed
+!data/raw/*.dvc
 
-# MLflow experiments & artifacts (very large – never commit)
+# Processed data – ignore by default, but allow specific deployment files
+data/processed/*
+!data/processed/preprocessor.pkl   # ← explicitly allow for Render deployment
+
+# Models – ignore by default, but allow specific deployment files
+models/*
+!models/xgboost_model.pkl          # ← explicitly allow for Render deployment
+
+# MLflow runs & artifacts (very large, never commit)
 mlruns/
 mlflow/
 
-# DVC cache (never commit – huge and local)
+# DVC cache (local, huge – never commit)
 .dvc/cache/
 *.dvc.cache
 
-# Model artifacts – usually generated (but allow if small for deployment)
-models/*.pkl             # ← XGBoost model
-models/*.joblib
-data/processed/*.pkl     # ← fitted preprocessor
-data/processed/*.joblib
-
-# If you want to ALLOW committing small artifacts (recommended for portfolio/demo):
-# Remove or comment out the lines above and add:
-# !models/xgboost_model.pkl
-# !data/processed/preprocessor.pkl
-
-# Logs & temp files
+# Logs, temp, backups
 *.log
 *.tmp
 *.bak
+
+# OS-specific junk
 .DS_Store                # macOS
 Thumbs.db                # Windows
+ehthumbs.db
 
-# IDE / Editor files
+# IDE / editor files
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Docker / Build artifacts
-docker-compose.override.yml
-*.dockerignore.backup
-
-# Testing / Coverage
+# Testing / coverage
 .pytest_cache/
 .coverage
 coverage.xml
 htmlcov/
 
-# Dependency management
+# Docker / build temp
+docker-compose.override.yml
+*.dockerignore.backup
+
+# Dependency locks (if not using)
 Pipfile.lock
 poetry.lock
-
-# macOS / Windows junk
-.DS_Store
-ehthumbs.db
-
-!data/processed/preprocessor.pkl
-!models/xgboost_model.pkl
