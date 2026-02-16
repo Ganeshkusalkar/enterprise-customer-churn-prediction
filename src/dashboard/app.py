@@ -5,8 +5,7 @@ import pandas as pd
 import json
 
 # Configuration - change this when deployed!
-API_URL = "https://your-new-render-url.onrender.com/predict" # ← update this  # ← Local backend
-# API_URL = "https://your-render-app.onrender.com/predict"  # ← Use this when deployed
+API_URL = "https://enterprise-customer-churn-prediction.onrender.com/predict"  # ← Use this when deployed
 
 st.set_page_config(
     page_title="Telco Churn Prediction Dashboard",
