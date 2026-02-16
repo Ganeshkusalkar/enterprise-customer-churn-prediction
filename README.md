@@ -78,3 +78,12 @@ End-to-end MLOps pipeline:
    ```bash
    git clone https://github.com/Ganeshkusalkar/enterprise-customer-churn-prediction.git
    cd enterprise-customer-churn-prediction
+
+
+## Live Demos
+
+- **API (FastAPI)**: https://your-telco-churn-api.onrender.com/docs  
+  (Try /predict endpoint interactively)
+
+- **Dashboard (Streamlit)**: https://your-dashboard.streamlit.app  
+  (Interactive form → real-time predictions from backend)
