@@ -71,3 +71,6 @@ poetry.lock
 # macOS / Windows junk
 .DS_Store
 ehthumbs.db
+
+!data/processed/preprocessor.pkl
+!models/xgboost_model.pkl
