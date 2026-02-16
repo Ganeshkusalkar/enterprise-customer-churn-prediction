@@ -65,3 +65,7 @@ docker-compose.override.yml
 # Dependency locks (if not using)
 Pipfile.lock
 poetry.lock
+
+# Allow small model artifacts for deployment (portfolio only)
+!data/processed/preprocessor.pkl
+!models/xgboost_model.pkl
