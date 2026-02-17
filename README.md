@@ -115,7 +115,7 @@ Built to be **reproducible**, **auditable**, and **business-useful** — exactly
 <img src="https://github.com/Ganeshkusalkar/enterprise-customer-churn-prediction/blob/main/docs/confusion_matrix_xgboost.png" width="420" alt="Confusion Matrix">
 
 **Survival Curve (by Contract Type)**  
-<img src="https://raw.githubusercontent.com/Ganeshkusalkar/enterprise-customer-churn-prediction/main/docs/survival-curve.png" width="520" alt="Kaplan-Meier Survival Curve">
+<img src="https://github.com/Ganeshkusalkar/enterprise-customer-churn-prediction/blob/main/docs/survival_curve.png" width="520" alt="Kaplan-Meier Survival Curve">
 
 ---
 
