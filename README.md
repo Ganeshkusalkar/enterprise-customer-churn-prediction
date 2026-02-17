@@ -89,14 +89,14 @@ Built to be **reproducible**, **auditable**, and **business-useful** — exactly
 ## Architecture
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Ganeshkusalkar/enterprise-customer-churn-prediction/main/docs/mlops-pipeline.png" width="820" alt="End-to-end MLOps Architecture">
+  <img src="https://github.com/Ganeshkusalkar/enterprise-customer-churn-prediction/blob/main/docs/architechure.jpg" width="820" alt="End-to-end MLOps Architecture">
   <br><em>Complete MLOps lifecycle: Data → Validation → Training → Serving → Monitoring</em>
 </p>
 
-<p align="center">
+<!-- <p align="center">
   <img src="https://raw.githubusercontent.com/Ganeshkusalkar/enterprise-customer-churn-prediction/main/docs/churn-flow.png" width="720" alt="Business Churn Flow">
   <br><em>From customer event → risk scoring → retention action</em>
-</p>
+</p> -->
 
 ---
 
