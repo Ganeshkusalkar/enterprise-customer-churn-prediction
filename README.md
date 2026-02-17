@@ -112,7 +112,7 @@ Built to be **reproducible**, **auditable**, and **business-useful** — exactly
 | Recall (Churn class)  | ~0.74  | Catches most actual churners               |
 
 **Confusion Matrix**  
-<img src="https://raw.githubusercontent.com/Ganeshkusalkar/enterprise-customer-churn-prediction/main/docs/confusion-matrix.png" width="420" alt="Confusion Matrix">
+<img src="https://github.com/Ganeshkusalkar/enterprise-customer-churn-prediction/blob/main/docs/confusion_matrix_xgboost.png" width="420" alt="Confusion Matrix">
 
 **Survival Curve (by Contract Type)**  
 <img src="https://raw.githubusercontent.com/Ganeshkusalkar/enterprise-customer-churn-prediction/main/docs/survival-curve.png" width="520" alt="Kaplan-Meier Survival Curve">
